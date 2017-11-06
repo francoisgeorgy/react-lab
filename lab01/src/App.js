@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Foo from './components/Foo.js';
 import Bar from "./components/Bar";
+import ExampleComponent from "./components/ExampleComponent/index";
 
 
 function Welcome(props) {
@@ -23,6 +24,7 @@ class App extends Component {
         <Welcome name="Jane" />
           <Foo />
           <Bar />
+          <ExampleComponent />
       </div>
     );
   }
