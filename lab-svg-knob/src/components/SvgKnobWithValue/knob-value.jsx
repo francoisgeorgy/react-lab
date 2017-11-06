@@ -6,28 +6,31 @@ class SvgKnobWithValue extends Component {
 
     constructor(props) {
         super(props);
-        this.k = null;
+        console.log('SvgKnobWithValue constructor', props);
+        this.handleChange = this.handleChange.bind(this);
+        this.state = {
+            value: 0   // knob value
+        };
+    }
+
+    handleChange(e) {
+        console.log('SvgKnobWithValue handleChange', e.detail);
+        this.setState({value: e.detail});
+        console.log('SvgKnobWithValue handleChange', this.state);
     }
 
     componentDidMount() {
-        this.k = new Knob('#knob', { /* config... */ });
-        // do additional config with:
-        // k...
-
-        // const value_elem = document.getElementById("value");
-        // const knobs_elem = document.getElementsByClassName("knob");
-        // this.k.addEventListener("change", function(event) {
-        //     // Event.target: a reference to the object that dispatched the event. It is different from event.currentTarget
-        //     //               when the event handler is called during the bubbling or capturing phase of the event.
-        //     value_elem.innerText = `#${event.target.id}: ${event.detail}`;
-        // });
+        console.log('SvgKnobWithValue componentDidMount');
+        // this.nv.addEventListener("change", this.handleChange);
     }
 
     render() {
+        const v = this.state.value;
+        console.log('SvgKnobWithValue render', v);
         return (
-            <div class="knob">
-                <Knob/>
-                <Value/>
+            <div className="knob">
+                <Knob c={this.handleChange} />
+                <Value value={v} />
             </div>
         );
     }

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
-// import knob from '/home/pri/dev/projets/svg-knob/dist/svg-knob.min.js';
 import SvgKnob from './components/SvgKnob';
+import SvgKnobWithValue from "./components/SvgKnobWithValue/knob-value";
 
 // function K(props) {
 //     return <h1>{props.cfg}</h1>;
 // }
 
+/*
 function SvgWithoutXlink() {
     return (
         <svg width="100" height="100" viewBox="0 0 120 120">
@@ -40,25 +40,25 @@ function SvgWithXlink(props) {
         </svg>
     );
 }
-
+*/
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        {/*<header className="App-header">*/}
-          {/*<img src={logo} className="App-logo" alt="logo" />*/}
-          {/*<h1 className="App-title">Welcome to React</h1>*/}
-        {/*</header>*/}
-        {/*<p className="App-intro">*/}
-          {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
-        {/*</p>*/}
-        {/*<SvgWithoutXlink />*/}
-        {/*<SvgWithXlink fill="violet" />*/}
-        <SvgKnob/>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                  {/*<SvgWithoutXlink />*/}
+                  {/*<SvgWithXlink fill="violet" />*/}
+              <div>
+                  Knob only;
+                  <SvgKnob/>
+              </div>
+              <div>
+                  Knob with value updated by knob's onChange event:
+                  <SvgKnobWithValue/>
+              </div>
+            </div>
+        );
+    }
 }
 
 export default App;

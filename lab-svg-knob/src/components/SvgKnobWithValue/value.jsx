@@ -4,17 +4,24 @@ class Value extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            counter: 0
-        };
+        console.log('Value constructor', props);
+        // this.state = {
+        //    value: props.value
+        // };
     }
 
-    componentDidMount() {
-    }
+    // componentDidMount() {
+    // }
+
+    // componentWillReceiveProps() {
+    //     console.log('Value componentWillReceiveProps');
+    // }
 
     render() {
+        const v = this.props.value;
+        console.log('Value render', v);
         return (
-            <div class="value">{this.state.value}</div>
+            <div className="value">{v}</div>
         );
     }
 }
