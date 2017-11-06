@@ -6,31 +6,19 @@ class SvgKnobWithValue extends Component {
 
     constructor(props) {
         super(props);
-        console.log('SvgKnobWithValue constructor', props);
         this.handleChange = this.handleChange.bind(this);
-        this.state = {
-            value: 0   // knob value
-        };
+        this.state = { value: 0 };
     }
 
     handleChange(e) {
-        console.log('SvgKnobWithValue handleChange', e.detail);
         this.setState({value: e.detail});
-        console.log('SvgKnobWithValue handleChange', this.state);
-    }
-
-    componentDidMount() {
-        console.log('SvgKnobWithValue componentDidMount');
-        // this.nv.addEventListener("change", this.handleChange);
     }
 
     render() {
-        const v = this.state.value;
-        console.log('SvgKnobWithValue render', v);
         return (
             <div className="knob">
-                <Knob c={this.handleChange} />
-                <Value value={v} />
+                <Knob onChange={this.handleChange} />
+                <Value value={this.state.value} />
             </div>
         );
     }
