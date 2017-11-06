@@ -3,16 +3,7 @@ import SvgKnob from 'svg-knob';
 
 class Knob extends Component {
 
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-    }
-
-    handleChange(e) {
-        if (this.props.onChange) {
-            this.props.onChange(e);
-        }
-    }
+    handleChange = e => {if (this.props.onChange) this.props.onChange(e);};
 
     componentDidMount() {
         this.k = new SvgKnob(this.dom);

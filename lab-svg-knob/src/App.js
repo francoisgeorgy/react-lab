@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import SvgKnob from './components/SvgKnob';
 import SvgKnobWithValue from "./components/SvgKnobWithValue/knob-value";
+import SvgKnobWithValueSimplerSyntax from "./components/SvgKnobWithValueSimplerSyntax/";
 
 // function K(props) {
 //     return <h1>{props.cfg}</h1>;
@@ -46,16 +47,23 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                  {/*<SvgWithoutXlink />*/}
-                  {/*<SvgWithXlink fill="violet" />*/}
-              <div>
-                  Knob only;
-                  <SvgKnob/>
-              </div>
-              <div>
-                  Knob with value updated by knob's onChange event:
-                  <SvgKnobWithValue/>
-              </div>
+                {/*<SvgWithoutXlink />*/}
+                {/*<SvgWithXlink fill="violet" />*/}
+                <div>
+                    Knob only;
+                    <SvgKnob/>
+                </div>
+                <div>
+                    Knob with value updated by knob's onChange event:
+                    <SvgKnobWithValue/>
+                </div>
+
+                <div>
+                    Like above, with simpler syntax:
+                    <SvgKnobWithValueSimplerSyntax/>
+                </div>
+
+
             </div>
         );
     }

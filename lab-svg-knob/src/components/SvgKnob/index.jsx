@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Knob from '../../../node_modules/svg-knob';
+import Knob from 'svg-knob';
 
 class SvgKnob extends Component {
 
@@ -22,9 +22,7 @@ class SvgKnob extends Component {
     render() {
         return (
             <div className="knob">
-                {/*<svg id="knob" ref={elem => this.nv = elem}  />*/}
                 <svg ref={elem => this.dom = elem} />
-                {/*<div className="value" id="value"/>*/}
             </div>
         );
     }
