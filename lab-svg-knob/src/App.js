@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 // import knob from '/home/pri/dev/projets/svg-knob/dist/svg-knob.min.js';
+import SvgKnob from './components/SvgKnob';
 
 // function K(props) {
 //     return <h1>{props.cfg}</h1>;
@@ -52,8 +53,9 @@ class App extends Component {
         {/*<p className="App-intro">*/}
           {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
         {/*</p>*/}
-        <SvgWithoutXlink />
-        <SvgWithXlink fill="violet" />
+        {/*<SvgWithoutXlink />*/}
+        {/*<SvgWithXlink fill="violet" />*/}
+        <SvgKnob/>
       </div>
     );
   }
