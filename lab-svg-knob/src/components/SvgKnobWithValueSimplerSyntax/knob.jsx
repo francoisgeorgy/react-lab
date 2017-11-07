@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import SvgKnob from 'svg-knob';
 
 class Knob extends Component {
 
-    handleChange = e => {if (this.props.onChange) this.props.onChange(e);};
+    // Using the new class-field syntax (https://github.com/tc39/proposal-class-fields):
+    handleChange = e => {
+        if (this.props.onChange) this.props.onChange(e);
+    };
 
     componentDidMount() {
         this.k = new SvgKnob(this.dom);
@@ -21,5 +25,10 @@ class Knob extends Component {
         );
     }
 }
+
+// https://reactjs.org/docs/typechecking-with-proptypes.html
+Knob.propTypes = {
+    onChange: PropTypes.func    // optional
+};
 
 export default Knob;

@@ -9,6 +9,7 @@ class SvgKnobWithValueSimplerSyntax extends Component {
 
     state = { value: 0 };
 
+    // Using the new class-field syntax (https://github.com/tc39/proposal-class-fields):
     handleChange = e => this.setState({value: e.detail});
 
     render() {
