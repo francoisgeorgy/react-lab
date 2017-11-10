@@ -1,0 +1,35 @@
+.App {
+}
+
+.App > div {
+    background-color: #eee;
+    width: 200px;
+}
+
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/animation */
+
+@keyframes mvX2 {
+    from {transform: translateX(0)}
+    100% {
+        fill: red;
+    }
+    to  {
+        transform: translateX(20px);
+        fill: red;
+    }
+}
+
+.anim {
+    /*   animation: mvX2 1s linear infinite; */
+    animation-name: mvX2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
