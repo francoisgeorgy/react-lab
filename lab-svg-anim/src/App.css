@@ -2,6 +2,10 @@
 }
 
 .App > div {
+    margin: 1em 0;
+}
+
+div.diagram {
     background-color: #eee;
     width: 200px;
 }
@@ -12,11 +16,14 @@
 
 @keyframes mvX2 {
     from {transform: translateX(0)}
+    80% {
+        fill: black;
+    }
     100% {
         fill: red;
     }
     to  {
-        transform: translateX(20px);
+        transform: translateX(60px);
         fill: red;
     }
 }
