@@ -1,0 +1,9 @@
+
+.App > div {
+    margin: 1em 0;
+}
+
+div.diagram {
+    background-color: #eee;
+    width: 200px;
+}

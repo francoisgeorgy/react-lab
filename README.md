@@ -1,4 +1,5 @@
 # react-lab
+
 My place where I do various dummy experiments and tests with React
 
 https://github.com/facebookincubator/create-react-app
@@ -41,5 +42,19 @@ https://github.com/facebookincubator/create-react-app
 
 To check: https://github.com/matthewwithanm/react-inlinesvg
     
+# React Transition
+
+Do not use _Animation Add-Ons_ https://reactjs.org/docs/animation.html. This is legacy code. 
+
+> ReactTransitionGroup and ReactCSSTransitionGroup have been moved to the react-transition-group package that is maintained by the community
+
+Use https://github.com/reactjs/react-transition-group
+
+Doc: https://reactcommunity.org/react-transition-group/
+
+Examples: 
+- https://wikiwi.github.io/react-css-transition/
+- https://dev.to/underdogio/adding-animations-to-your-react-app-with-react-transition-group
+
     
        
