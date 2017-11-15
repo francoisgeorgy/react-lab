@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Transition } from 'react-transition-group';
 import { EXITED, ENTERED, ENTERING, EXITING } from 'react-transition-group/Transition';
 import './App.css';
+import Dot from "./components/Dot";
 // import Svg from "./components/Svg";
 
 const duration = 500;
@@ -113,6 +114,8 @@ const Move = ({ in: inProp, dx }) => (
     </Transition>
 );
 */
+
+/*
 class Move extends Component {
     constructor(props) {
         super(props);
@@ -129,6 +132,17 @@ class Move extends Component {
                 <div style={{ ...defaultMoveStyle, transform: 'translateY(0px)' }}>X {this.props.in ? 'in' : 'not'}</div>
             )
         }
+    };
+}
+*/
+class Move extends Component {
+    // constructor(props) {
+    //     super(props);
+    //     console.log('Move constructor', props);
+    // }
+    render() {
+        console.log('render Move', this.props);
+        return (<Dot in={this.props.in} />);
     };
 }
 
@@ -151,7 +165,14 @@ class App extends Component {
                     Click to toggle
                 </button>
                 <div>
-                    <Move in={!!show} dx={50} />
+                    {/*<Move in={!!show} dx={50} />*/}
+                    <svg ref={elem => this.dom = elem} width="20vw" viewBox="0 0 100 100">
+                        <path d="M10,10 h80 M10,20 h80 M10,30 h80" stroke="#888" strokeWidth="1" />
+                        <Dot cx="10" cy="10" name="A" in={!!show} dx={80} />
+                        {/*<Dot cx="20" cy="10" name="A" animate={this.props.animate && this.props.animate.includes('A')} />*/}
+                        {/*<Dot cx="20" cy="20" name="B" animate={this.props.animate && this.props.animate.includes('B')} />*/}
+                        {/*<Dot cx="20" cy="30" name="C" animate={this.props.animate && this.props.animate.includes('C')} />*/}
+                    </svg>
                 </div>
             </div>
         )
