@@ -6,3 +6,11 @@
 .knob .value {
     text-align: center;
 }
+
+.slider {
+    width: 40px;
+}
+
+.slider .value {
+    text-align: center;
+}

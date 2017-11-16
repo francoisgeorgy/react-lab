@@ -3,6 +3,7 @@ import './App.css';
 import SvgKnob from './components/SvgKnob';
 import SvgKnobWithValue from "./components/SvgKnobWithValue/knob-value";
 import SvgKnobWithValueSimplerSyntax from "./components/SvgKnobWithValueSimplerSyntax/";
+import SliderContainer from "./components/SliderContainer/index";
 
 // function K(props) {
 //     return <h1>{props.cfg}</h1>;
@@ -63,6 +64,10 @@ class App extends Component {
                     <SvgKnobWithValueSimplerSyntax/>
                 </div>
 
+                <div>
+                    SliderContainer:
+                    <SliderContainer />
+                </div>
 
             </div>
         );
