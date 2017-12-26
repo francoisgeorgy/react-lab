@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class ExampleComponent extends Component {
 
@@ -7,7 +7,7 @@ class ExampleComponent extends Component {
     // If you do neither of these, then there is no need for a constructor.
     constructor(props) {
         super(props);
-        console.log('constructor');
+        console.log('ExampleComponent.constructor');
         // this.handleClick = this.handleClick.bind(this);
         // this.state = {
         //     clicks: 0
@@ -20,21 +20,21 @@ class ExampleComponent extends Component {
     // and there is no DOM to interact with.
     // Note that this is also the only lifecycle method called on the server.
     componentWillMount() {
-        console.log('componentWillMount');
+        console.log('ExampleComponent.componentWillMount');
     }
 
     // Your component has now been rendered and exists in the DOM. This is the point when you should initiate
     // AJAX requests, add event listeners, and perform any set up that requires a DOM.
     // Calling setState during this method or any time after will cause a re-render.
     componentDidMount() {
-        console.log('componentDidMount');
+        console.log('ExampleComponent.componentDidMount');
     }
 
     // When your component receives new props from its parent, componentWillReceiveProps(nextProps) is triggered.
     // This is a great time to check if there are changes in the incoming props when compared to your current props
     // and trigger a state change based on the new values. A common use-case for this is resetting state based on a change.
     componentWillReceiveProps() {
-        console.log('componentWillReceiveProps');
+        console.log('ExampleComponent.componentWillReceiveProps');
     }
 
     // This method exists purely for performance improvements. Renders and reconciliations are expensive in React.
@@ -44,7 +44,7 @@ class ExampleComponent extends Component {
     // If shouldComponentUpdate() returns false, then componentWillUpdate(), render(), and componentDidUpdate() will
     // not be invoked.
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('shouldComponentUpdate');
+        console.log('ExampleComponent.shouldComponentUpdate');
         return true;
         // return this.props.clicks !== nextProps.clicks;
     }
@@ -55,20 +55,20 @@ class ExampleComponent extends Component {
     // use componentWillReceiveProps if you need to do anything before a render.
     // Note that this method is not called on the initial render.
     componentWillUpdate() {
-        console.log('componentWillUpdate');
+        console.log('ExampleComponent.componentWillUpdate');
     }
 
     // Immediately after React builds you a shiny new UI, componentDidUpdate(prevProps, prevState) is invoked.
     // This is a great time to interact with the DOM or instantiate a new network request based on what the new
     // interface should look like.
     componentDidUpdate() {
-        console.log('componentDidUpdate');
+        console.log('ExampleComponent.componentDidUpdate');
     }
 
     // Your component had a great life and now it’s time for it to leave the UI. This is the moment to clean up
     // everything that was associated with adding and maintaining your component while it was living on the UI.
     componentWillUnmount() {
-        console.log('componentWillUnmount');
+        console.log('ExampleComponent.componentWillUnmount');
     }
 
     // componentDidCatch(error, info) is a new lifecycle that was added in React 16. React was notorious for crashing
@@ -77,7 +77,7 @@ class ExampleComponent extends Component {
     // JavaScript error occurring in a component’s tree for the children of the component that implements the method.
     // It is able to capture the error and display a fallback UI.
     componentDidCatch(error, info) {
-        console.log('componentDidCatch');
+        console.log('ExampleComponent.componentDidCatch');
         // Display fallback UI
         // this.setState({ hasError: true });
         // You can also log the error to an error reporting service
@@ -85,7 +85,7 @@ class ExampleComponent extends Component {
     }
 
     render() {
-        console.log('render');
+        console.log('ExampleComponent.render');
         return (
             <div>ExampleComponent</div>
         );
