@@ -48,6 +48,15 @@ class App extends Component {
         console.log('App.componentWillMount');
     }
 
+    //
+    // https://reactjs.org/docs/react-component.html#componentdidmount
+    // componentDidMount() is invoked immediately after a component is mounted. Initialization that requires DOM nodes
+    // should go here.
+    // If you need to load data from a remote endpoint, this is a good place to instantiate the network request.
+    // Calling setState() in this method will trigger an extra rendering, but it will happen before the browser updates
+    // the screen. This guarantees that even though the render() will be called twice in this case, the user won’t see
+    // the intermediate state.
+    //
     componentDidMount() {
         console.log('App.componentDidMount');
     }
@@ -77,7 +86,13 @@ class App extends Component {
         console.log('App.componentDidCatch');
     }
 
-
+    //
+    // https://reactjs.org/docs/react-component.html#render
+    // The render() function should be pure, meaning that it does not modify component state, it returns the same result
+    // each time it’s invoked, and it does not directly interact with the browser. If you need to interact with the browser,
+    // perform your work in componentDidMount() or the other lifecycle methods instead. Keeping render() pure makes
+    // components easier to think about.
+    //
     render() {
         console.log('App.render');
         return (
